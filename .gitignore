@@ -39,3 +39,6 @@ bash_scripts
 /PlushSim/assets/
 /PlushSim/interaction_sequence/
 .DS_Store
+
+*.tar.bz2
+ACID/ACID_data/

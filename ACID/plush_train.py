@@ -113,9 +113,12 @@ data_vis_list = []
 if cfg['model']['type'] == 'geom':
     vis_dataset = data.core.get_geom_dataset(cfg, split='vis')
 elif cfg['model']['type'] == 'combined':
+    # HERE
     vis_dataset = data.core.get_combined_dataset(cfg, split='vis')
 # Build a data dictionary for visualization
 np.random.seed(0)
+a=len(vis_dataset) # 0
+b=cfg['training']['visualize_total']
 data_idxes = np.random.randint(len(vis_dataset), size=cfg['training']['visualize_total'])
 for i, id in enumerate(data_idxes):
     data_vis = data.core.collate_pair_fn([vis_dataset[id]]) 
